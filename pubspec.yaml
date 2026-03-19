@@ -1,0 +1,165 @@
+name: owa_flutter
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0-323.0.dev
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  http: ^1.5.0
+  flutter_svg: ^2.2.0
+  font_awesome_flutter: ^10.9.1
+  url_launcher: ^6.3.2
+  visibility_detector: ^0.4.0+2
+  google_fonts: ^6.3.0
+  flutter_avif: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/hero_left.jpg
+    - assets/hero_right.png
+    - assets/follow_us_1.jpg
+    - assets/follow_us_2.png
+    - assets/follow_us_3.jpg
+    - assets/follow_us_4.jpg
+    - assets/follow_us.png
+    - assets/discover_1.jpg
+    - assets/discover_2.jpg
+    - assets/discover_3.jpg
+    - assets/discover_4.jpg
+    - assets/discover/1.jpg
+    - assets/discover/2.png
+    - assets/discover/3.jpg
+    - assets/discover/4.jpg
+    - assets/membership_1.jpg
+    - assets/membership_2.png
+    - assets/membership_3.jpg
+    - assets/bridge.jpg
+    - assets/bridge1a.png
+    - assets/therapies.png
+    - assets/OWA_Logo.svg
+    # Icons
+    - assets/icons/add_icon.svg
+    - assets/icons/remove_icon.svg
+    - assets/icons/circle.svg
+    - assets/icons/close.svg
+    - assets/icons/add.svg
+    - assets/icons/remove.svg
+    - assets/icons/arrow_right.svg
+    # Events images
+    - assets/events1.png
+    - assets/events2.png
+    - assets/events3.png
+    - assets/events4.png
+    - assets/logo/a.svg
+    - assets/logo/circle.svg
+    - assets/logo/o.svg
+    - assets/logo/w.svg
+    - assets/footer_icon.svg
+    - assets/icons/thin_arrow_left.svg
+    - assets/icons/thin_arrow_right.svg
+
+  fonts:
+    - family: Basier Square Mono
+      fonts:
+        - asset: fonts/Basier Squaremono-regular-webfont.ttf
+          weight: 400
+    
+    - family: ZapfHumnst BT
+      fonts:
+        - asset: fonts/bodoni-six-itc-bold-italic-os-5871d33e4dc4a.ttf
+
+# Se va a actualizar la familia Arbeit con las tipografias
+# Entregadas por el Cliente
+    - family: Arbeit
+      fonts:
+        - asset: fonts/Arbeit-Book.otf
+          weight: 300
+        - asset: fonts/ArbeitProTrial-Regular-BF642632f0d641d.ttf
+          weight: 400
+        - asset: fonts/Arbeit-Variable.ttf
+          weight: 500
+
+
+
+    # You'll still need these fonts for the footer:
+    #- family: Basier Circle Mono
+    #  fonts:
+    #    - asset: fonts/Basier Circle Mono-Medium.ttf  # You'll need to get this
+    #      weight: 500
+    #
+    #- family: Inter
+    #  fonts:
+    #    - asset: fonts/Inter-Medium.ttf  # You can download this free from Google Fonts
+    #      weight: 500
+
+# Fuentes agregadas el 20260225
+
+    - family: Basier Circle Mono
+      fonts:
+        - asset: fonts/BasierCircleMono-Medium.otf
+          weight: 500
+        - asset: fonts/BasierCircleMono-Regular.otf
+          weight: 400
+
+    - family: Instrument Sans
+      fonts:
+        - asset: fonts/InstrumentSans-Medium.ttf
+          weight: 500
+        - asset: fonts/InstrumentSans-Regular.ttf
+          weight: 400
+          
+    - family: Times Now
+      fonts:
+        - asset: fonts/TimesNow-SemiLight.ttf
+          weight: 400

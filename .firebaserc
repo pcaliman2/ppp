@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "latente-63c24"
+  },
+  "targets": {
+    "latente-63c24": {
+      "hosting": {
+        "owa": [
+          "latente-owa"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
