@@ -9,12 +9,17 @@ class ResponsiveBreakpoints {
 
 double _effectiveWidth(BuildContext context) {
   final mediaQuery = MediaQuery.of(context);
+  final logicalWidth = mediaQuery.size.width;
 
-  if (kIsWeb) {
-    return mediaQuery.size.width * mediaQuery.devicePixelRatio;
+  // En web móvil/tablet (Safari iPhone, Chrome Android, etc.)
+  // NO debemos multiplicar por devicePixelRatio.
+  if (kIsWeb &&
+      defaultTargetPlatform != TargetPlatform.iOS &&
+      defaultTargetPlatform != TargetPlatform.android) {
+    return logicalWidth * mediaQuery.devicePixelRatio;
   }
 
-  return mediaQuery.size.width;
+  return logicalWidth;
 }
 
 bool isDesktopFromContext(BuildContext context) {
