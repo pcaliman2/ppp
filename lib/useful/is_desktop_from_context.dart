@@ -1,5 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+enum DeviceType { mobile, tablet, desktop }
 
 class ResponsiveBreakpoints {
   static const double mobileMax = 599;
@@ -7,22 +8,20 @@ class ResponsiveBreakpoints {
   static const double desktopMin = 1024;
 }
 
-double _effectiveWidth(BuildContext context) {
-  final mediaQuery = MediaQuery.of(context);
-  final logicalWidth = mediaQuery.size.width;
+DeviceType getDeviceType(BuildContext context) {
+  final width = MediaQuery.of(context).size.width;
 
-  // En web móvil/tablet (Safari iPhone, Chrome Android, etc.)
-  // NO debemos multiplicar por devicePixelRatio.
-  if (kIsWeb &&
-      defaultTargetPlatform != TargetPlatform.iOS &&
-      defaultTargetPlatform != TargetPlatform.android) {
-    return logicalWidth * mediaQuery.devicePixelRatio;
+  if (width >= ResponsiveBreakpoints.desktopMin) {
+    return DeviceType.desktop;
   }
 
-  return logicalWidth;
+  if (width <= ResponsiveBreakpoints.mobileMax) {
+    return DeviceType.mobile;
+  }
+
+  return DeviceType.tablet;
 }
 
 bool isDesktopFromContext(BuildContext context) {
-  final width = _effectiveWidth(context);
-  return width >= ResponsiveBreakpoints.desktopMin;
+  return getDeviceType(context) == DeviceType.desktop;
 }
